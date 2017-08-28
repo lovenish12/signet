@@ -1,0 +1,67 @@
+Feature: Smoke Test zales site.
+
+  @TC01
+  Scenario: I want to test the functionality of zales application. [90m# smoketest.feature:7[0m
+    [32mGiven [0m[32mI navigate on to the zales site[0m                          [90m# Smoketeststep.i_navigate_on_to_the_zales_site()[0m
+    #And I take a screenshot of zales home page
+    [32mAnd [0m[32mI click on sign in button[0m                                  [90m# Smoketeststep.i_click_on_sign_in_button()[0m
+    [32mAnd [0m[32mI enter the "[0m[32m[1mzales[0m[32m" data[0m                                   [90m# Smoketeststep.i_enter_the_data(String)[0m
+    #And I take a screenshot of zales login page
+    [32mAnd [0m[32mI click on signin button[0m                                   [90m# Smoketeststep.i_click_on_signin_button()[0m
+    #And I take a screenshot of zales user account page
+    [32mAnd [0m[32mI click on the serachbox field[0m                             [90m# Smoketeststep.i_click_on_the_serachbox_field()[0m
+    [32mAnd [0m[32mI enter "[0m[32m[1mrings[0m[32m" in the searchbox[0m                           [90m# Smoketeststep.i_enter_in_the_searchbox(String)[0m
+    [32mAnd [0m[32mI click on the serachbox submit button[0m                     [90m# Smoketeststep.i_click_on_the_serachbox_submit_button()[0m
+    #And I take a screenshot of search result page
+    #And I verify the number of product on search result page
+    #And I click on favorite icon on PLP page
+    #And I verify that compare button is disabled on PLP page
+    #And I click on add to compare button
+    #And I click on add to compare button for second product
+    #And I verify that compare button is enabled on PLP page
+    [32mAnd [0m[32mI click on product available on PLP page[0m                   [90m# Smoketeststep.i_click_on_product_available_on_PLP_page()[0m
+    #And I take a screenshot of PDP page
+    #And I click on add to shopping bag on PDP page
+    #And I click on checkout now button on PDP page
+    #And I click on proceed to checkout
+    [32mAnd [0m[32mI click on mini shopping bag icon[0m                          [90m# Smoketeststep.i_click_on_mini_shopping_bag_icon()[0m
+    #And I take a screenshot of checkout page
+    [31mAnd [0m[31mI click on checkout button[0m                                 [90m# Smoketeststep.i_click_on_checkout_button()[0m
+      [31morg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/main/div/div[2]/div[3]/div[3]/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[2]/button"}
+        (Session info: chrome=60.0.3112.101)
+        (Driver info: chromedriver=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+      Command duration or timeout: 10.22 seconds
+      For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+      Build info: version: '3.3.1', revision: '5234b325d5', time: '2017-03-10 09:10:29 +0000'
+      System info: host: 'DDC5-DX-50QN6C2', ip: '10.243.251.78', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+      Driver info: org.openqa.selenium.chrome.ChromeDriver
+      Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477700 (0057494ad8732195794a7b32078424f92a5fce41), userDataDir=C:\Users\LOVENI~1.SAL\AppData\Local\Temp\scoped_dir10512_2816}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=60.0.3112.101, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+      Session ID: e7117e3c56ca8a19246d0e39144cc8e3
+      *** Element info: {Using=xpath, value=/html/body/main/div/div[2]/div[3]/div[3]/div[1]/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[2]/button}
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+      	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+      	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+      	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+      	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+      	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:476)
+      	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+      	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+      	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+      	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+      	at com.sun.proxy.$Proxy15.click(Unknown Source)
+      	at page_objects.Smoketest.clickCheckoutbutton(Smoketest.java:251)
+      	at Step_Definition.Smoketeststep.i_click_on_checkout_button(Smoketeststep.java:167)
+      	at ✽.And I click on checkout button(smoketest.feature:34)
+      [0m
+    [36mAnd [0m[36mI click on save address on shipping detail page[0m            [90m# Smoketeststep.i_click_on_save_address_on_shipping_detail_page()[0m
+    [36mAnd [0m[36mI select saved address on shipping detail page[0m             [90m# Smoketeststep.i_select_saved_address_on_shipping_detail_page()[0m
+    [36mAnd [0m[36mI click next button on shipping detail page[0m                [90m# Smoketeststep.i_click_next_button_on_shipping_detail_page()[0m
+    [36mAnd [0m[36mI click on next button on gift message page[0m                [90m# Smoketeststep.i_click_on_next_button_on_gift_message_page()[0m
+    [36mAnd [0m[36mI click on save address on payment detail page[0m             [90m# Smoketeststep.i_click_on_save_address_on_payment_detail_page()[0m
+    [36mAnd [0m[36mI select saved address on payment detail page[0m              [90m# Smoketeststep.i_select_saved_address_on_payment_detail_page()[0m
+    [36mAnd [0m[36mI enter "[0m[36m[1m691[0m[36m" cvv on payment details page[0m                  [90m# Smoketeststep.i_enter_cvv_on_payment_details_page(String)[0m
+    [36mAnd [0m[36mI click on next button on payment detail page[0m              [90m# Smoketeststep.i_click_on_next_button_on_payment_detail_page()[0m
+    [36mAnd [0m[36mI click on place an order on summary page[0m                  [90m# Smoketeststep.i_click_on_place_an_order_on_summary_page()[0m
